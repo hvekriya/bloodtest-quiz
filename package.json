@@ -9,9 +9,15 @@
   },
   "dependencies": {
     "@ditdot-dev/vue-flow-form": "^1.1.4",
+    "bootstrap": "^5.1.0",
     "docx": "^5.4.1",
     "file-saver": "^2.0.2",
+    "jquery": "^3.6.0",
     "register-service-worker": "^1.7.1",
+    "survey-creator": "^1.8.59",
+    "survey-knockout": "^1.8.59",
+    "survey-vue": "^1.8.59",
+    "surveyjs-widgets": "^1.8.59",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
