@@ -1,0 +1,112 @@
+@import "bootstrap/scss/bootstrap.scss";
+
+.sv_main .sv-title-actions__title {
+  flex-wrap: wrap;
+  max-width: 90%;
+  min-width: 0 !important;
+}
+
+.panel-heading.card-header {
+  background-color: #041866;
+  color: white;
+}
+
+.card-footer {
+  padding: 0.5rem 1rem;
+  border-top: 0 !important;
+  background: none;
+}
+
+.sv_prev_btn {
+  @extend .btn-secondary;
+  padding: 1.2rem;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.sv_next_btn {
+  @extend .btn-primary;
+  padding: 1.2rem;
+  width: 200px;
+  background-color: #fe700c;
+  border-color: #fe700c;
+
+  &:hover {
+    background-color: #fe8530;
+    border-color: #fe700c;
+  }
+}
+
+.small {
+  margin-left: 20px;
+}
+
+.sv-q-col-1 {
+  padding: 6px;
+}
+
+.form-control {
+  padding: 1rem;
+  border: 2px solid $secondary;
+
+  &:focus {
+    border: 2px solid $primary;
+    box-shadow: none;
+  }
+}
+
+//default tile styles
+.radio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid $secondary;
+  background-color: $gray-100;
+  border-radius: 5px;
+  margin-top: 10px;
+
+  input {
+    opacity: 0;
+  }
+
+  label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $secondary;
+    width: 100%;
+    padding: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &.sv-q-col-1 {
+    padding: 0;
+  }
+
+  &.checked {
+    background-color: $primary;
+    border: 2px solid $primary;
+    color: white;
+
+    label {
+      color: white;
+      background-color: $primary;
+    }
+  }
+
+  &:hover {
+    border: 2px solid $primary;
+  }
+
+  &:focus {
+    border: 2px solid $primary;
+  }
+}
