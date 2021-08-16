@@ -55,6 +55,17 @@
   }
 }
 
+.recommendations {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 18rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
 //default tile styles
 .radio {
   display: flex;
@@ -67,6 +78,7 @@
   background-color: $gray-100;
   border-radius: 5px;
   margin-top: 10px;
+  tab-index: 0;
 
   input {
     opacity: 0;

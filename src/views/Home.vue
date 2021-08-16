@@ -28,6 +28,11 @@ var myCss = {
   matrix: {
     root: "table table-striped",
   },
+  html: "sv_html",
+  image: {
+    image: "img-fluid",
+    root: "sv_q_image",
+  },
   // navigationButton: "btn"
 };
 
