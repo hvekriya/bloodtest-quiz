@@ -59,14 +59,13 @@ $primary: #041866;
     background-color: #fe8530;
     border-color: #fe700c;
   }
+}
 
-  .sv_complete_btn {
-    @extend .btn-secondary;
-    background-color: $success;
-    padding: 1.2rem;
-    width: 200px;
-    margin-right: 20px;
-  }
+.sv_complete_btn {
+  @extend .btn-sucess;
+  padding: 1.2rem;
+  width: 200px;
+  margin-right: 20px;
 }
 
 // CARD
