@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-    <survey :survey="survey"></survey>
+    <Survey :survey="survey"></Survey>
   </div>
 </template>
 
 <script>
+import $ from "jquery";
 import * as SurveyVue from "survey-vue";
 var Survey = SurveyVue.Survey;
 Survey.cssType = "bootstrap";
@@ -33,21 +34,41 @@ var myCss = {
     image: "img-fluid",
     root: "sv_q_image",
   },
+  rating: {
+    item: "btn btn-secondary rating",
+  },
   // navigationButton: "btn"
 };
+
+var surveyData = "";
+
+var surveyValueChanged = function (sender, options) {
+  console.log(sender.data);
+  surveyData = sender.data;
+};
+
+var surveyJSON = {
+  surveyId: "c724a789-0baf-4f45-8894-83301426ce83",
+  surveyPostId: "c18b3465-90c4-4098-9633-37569399c98c",
+}; // Server
+// var surveyJSON = Quiz.General // Local
+var model = new SurveyVue.Model(surveyJSON);
+model.css = myCss;
+model.onValueChanged.add(surveyValueChanged);
+model.onAfterRenderQuestion.add(function (survey, options) {
+  $(".rating").click(function () {
+    console.log("hi");
+    $(".rating").removeClass("active");
+    $(this).addClass("active");
+  });
+});
 
 export default {
   components: {
     Survey,
+    SurveyVue,
   },
   data() {
-    var surveyJSON = {
-      surveyId: "c724a789-0baf-4f45-8894-83301426ce83",
-      surveyPostId: "c18b3465-90c4-4098-9633-37569399c98c",
-    }; // Server
-    // var surveyJSON = Quiz.General // Local
-    var model = new SurveyVue.Model(surveyJSON);
-    model.css = myCss;
     return {
       survey: model,
     };

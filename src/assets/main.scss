@@ -44,14 +44,14 @@ $primary: #041866;
 .sv_prev_btn {
   @extend .btn-secondary;
   padding: 1.2rem;
-  width: 200px;
+  width: 146px;
   margin-right: 20px;
 }
 
 .sv_next_btn {
   @extend .btn-primary;
   padding: 1.2rem;
-  width: 200px;
+  width: 146px;
   background-color: #fe700c;
   border-color: #fe700c;
 
@@ -62,10 +62,29 @@ $primary: #041866;
 }
 
 .sv_complete_btn {
-  @extend .btn-sucess;
+  @extend .btn-success;
   padding: 1.2rem;
-  width: 200px;
+  width: 146px;
   margin-right: 20px;
+}
+
+//Rating
+
+.rating {
+  margin-right: 4px;
+  border: 2px solid $secondary;
+  background-color: $gray-200;
+  color: $black;
+
+  &:hover {
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  &.active {
+    background-color: $primary;
+  }
+
 }
 
 // CARD

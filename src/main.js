@@ -4,8 +4,6 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
-window.$ = window.jQuery = require('jquery');
-
 Vue.config.productionTip = false
 
 new Vue({

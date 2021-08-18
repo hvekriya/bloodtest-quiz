@@ -23,20 +23,20 @@ widgets.bootstrapslider(SurveyKo);
 customWidget(SurveyKo);
 SurveyKo.Serializer.addProperty("question", "tag:number");
 var CkEditor_ModalEditor = {
-  afterRender: function(modalEditor, htmlElement) {
+  afterRender: function (modalEditor, htmlElement) {
     var editor = window["CKEDITOR"].replace(htmlElement);
-    editor.on("change", function() {
+    editor.on("change", function () {
       modalEditor.editingValue = editor.getData();
     });
     editor.setData(modalEditor.editingValue);
   },
-  destroy: function(modalEditor, htmlElement) {
+  destroy: function (modalEditor, htmlElement) {
     var instance = window["CKEDITOR"].instances[htmlElement.id];
     if (instance) {
       instance.removeAllListeners();
       window["CKEDITOR"].remove(instance);
     }
-  }
+  },
 };
 SurveyCreator.SurveyPropertyModalEditor.registerCustomWidget(
   "html",
@@ -53,10 +53,10 @@ export default {
       "surveyCreatorContainer",
       options
     );
-    this.surveyCreator.saveSurveyFunc = function() {
+    this.surveyCreator.saveSurveyFunc = function () {
       console.log(JSON.stringify(this.text));
     };
-  }
+  },
 };
 </script>
 
