@@ -37,22 +37,18 @@ const params = new URLSearchParams(window.location.search);
 if (params.get("type") == "general-health") {
   surveyJSON = {
     surveyId: "c724a789-0baf-4f45-8894-83301426ce83",
-    surveyPostId: "c18b3465-90c4-4098-9633-37569399c98c",
   };
 } else if (params.get("type") == "exercise-goals") {
   surveyJSON = {
     surveyId: "9682a9c5-afba-42b0-b835-0edfcec0c8da",
-    surveyPostId: "b162969a-a885-4bfc-b55b-ee51a2e60568",
   };
 } else if (params.get("type") == "trouble-sleeping") {
   surveyJSON = {
     surveyId: "e09159cd-a0c7-41b7-a29b-67746b463bc6",
-    surveyPostId: "c149f43d-433c-4372-892e-f0b1baf47f86",
   };
 } else if (params.get("type") == "sexual-health") {
   surveyJSON = {
     surveyId: "54422021-4899-4ec2-b479-4e7df689fa3a",
-    surveyPostId: "cd5968d2-81d0-4611-98d4-7b132552f6b6",
   };
 } else {
   console.log("No Survey found");
