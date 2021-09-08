@@ -1,6 +1,7 @@
 @import "bootstrap/scss/bootstrap.scss";
 // VARIABLES AND VARIABLE OVERRIDES
 $primary: #041866;
+$gold: #d4af37;
 
 
 // BODY STYLES
@@ -37,6 +38,26 @@ $primary: #041866;
 .recommendations {
   display: flex;
   flex-wrap: wrap;
+
+  &.package_basic .card {
+    border: 2px solid $primary;
+    padding: 20px;
+    border-radius: 0.25rem;
+  }
+
+  &.package_premium .card {
+    border: 2px solid $gold;
+    padding: 20px;
+    border-radius: 0.25rem;
+  }
+}
+
+.card {
+  transition: all .4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 // BUTTONS
@@ -44,7 +65,7 @@ $primary: #041866;
 .sv_prev_btn {
   @extend .btn-secondary;
   padding: 1.2rem;
-  width: 146px;
+  width: 180px;
   margin-right: 20px;
 }
 
