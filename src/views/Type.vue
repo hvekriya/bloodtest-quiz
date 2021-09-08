@@ -73,6 +73,12 @@
     ><br /><br />
     <a href="/survey/?type=sexual-health" class="btn btn-secondary survey-type">
       Sexual Health</a
+    ><br /><br />
+    <a
+      href="/survey/?type=tired-all-the-time"
+      class="btn btn-secondary survey-type"
+    >
+      Tired All The Time</a
     >
   </div>
 </template>
