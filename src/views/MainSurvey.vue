@@ -50,6 +50,10 @@ if (params.get("type") == "general-health") {
   surveyJSON = {
     surveyId: "54422021-4899-4ec2-b479-4e7df689fa3a",
   };
+} else if (params.get("type") == "tired-all-the-time") {
+  surveyJSON = {
+    surveyId: "89ed9a13-4c82-4948-8788-e60ab9196add",
+  };
 } else {
   console.log("No Survey found");
 }
